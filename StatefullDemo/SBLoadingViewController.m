@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 Bui Hai. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "SBLoadingViewController.h"
 
-@interface ViewController ()
+@interface SBLoadingViewController ()
 
 @end
 
-@implementation ViewController
+@implementation SBLoadingViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
