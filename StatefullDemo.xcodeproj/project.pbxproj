@@ -18,6 +18,7 @@
 		307EEFA21B4239D2009F307D /* Storyboard_Client.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 307EEFA11B4239D2009F307D /* Storyboard_Client.storyboard */; };
 		307EEFA51B4239F7009F307D /* ClientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 307EEFA41B4239F7009F307D /* ClientViewController.m */; };
 		307EEFA81B424EFE009F307D /* SBErrorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 307EEFA71B424EFE009F307D /* SBErrorViewController.m */; };
+		307EEFB51B4279F8009F307D /* SBDefaultViewStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 307EEFB41B4279F8009F307D /* SBDefaultViewStateMachine.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		307EEFA41B4239F7009F307D /* ClientViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClientViewController.m; sourceTree = "<group>"; };
 		307EEFA61B424EFE009F307D /* SBErrorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBErrorViewController.h; sourceTree = "<group>"; };
 		307EEFA71B424EFE009F307D /* SBErrorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBErrorViewController.m; sourceTree = "<group>"; };
+		307EEFB31B4279F8009F307D /* SBDefaultViewStateMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBDefaultViewStateMachine.h; sourceTree = "<group>"; };
+		307EEFB41B4279F8009F307D /* SBDefaultViewStateMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBDefaultViewStateMachine.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,13 +135,9 @@
 		307EEFA91B42657D009F307D /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				307EEF7F1B41A9B1009F307D /* SBLoadingViewController.h */,
-				307EEF801B41A9B1009F307D /* SBLoadingViewController.m */,
-				307EEF821B41A9B1009F307D /* SBViewState.storyboard */,
-				307EEFA61B424EFE009F307D /* SBErrorViewController.h */,
-				307EEFA71B424EFE009F307D /* SBErrorViewController.m */,
 				307EEF9E1B41AD70009F307D /* SBViewStateMachine.h */,
 				307EEF9F1B41AD70009F307D /* SBViewStateMachine.m */,
+				307EEFB61B427A8F009F307D /* Default View State Machine */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
@@ -151,6 +150,20 @@
 				307EEFA41B4239F7009F307D /* ClientViewController.m */,
 			);
 			name = Demo;
+			sourceTree = "<group>";
+		};
+		307EEFB61B427A8F009F307D /* Default View State Machine */ = {
+			isa = PBXGroup;
+			children = (
+				307EEF7F1B41A9B1009F307D /* SBLoadingViewController.h */,
+				307EEF801B41A9B1009F307D /* SBLoadingViewController.m */,
+				307EEFA61B424EFE009F307D /* SBErrorViewController.h */,
+				307EEFA71B424EFE009F307D /* SBErrorViewController.m */,
+				307EEFB31B4279F8009F307D /* SBDefaultViewStateMachine.h */,
+				307EEFB41B4279F8009F307D /* SBDefaultViewStateMachine.m */,
+				307EEF821B41A9B1009F307D /* SBViewState.storyboard */,
+			);
+			name = "Default View State Machine";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				307EEFB51B4279F8009F307D /* SBDefaultViewStateMachine.m in Sources */,
 				307EEF811B41A9B1009F307D /* SBLoadingViewController.m in Sources */,
 				307EEFA01B41AD70009F307D /* SBViewStateMachine.m in Sources */,
 				307EEF7E1B41A9B1009F307D /* AppDelegate.m in Sources */,
@@ -456,6 +470,7 @@
 				307EEF9A1B41A9B1009F307D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		307EEF9B1B41A9B1009F307D /* Build configuration list for PBXNativeTarget "StatefullDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +479,7 @@
 				307EEF9D1B41A9B1009F307D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

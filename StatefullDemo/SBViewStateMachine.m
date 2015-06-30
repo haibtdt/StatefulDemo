@@ -12,8 +12,6 @@
 
 @interface SBViewStateMachine()
 @property (nonatomic, strong) NSMutableDictionary* allStateViews;
-@property (nonatomic, strong) SBErrorViewController* errorStateViewController;
-@property (nonatomic, strong) SBLoadingViewController* loadingStateViewController;
 
 @end
 
@@ -35,23 +33,6 @@
     [_allStateViews setValue:view forKey:stateName];
 }
 
-
-+ (SBViewStateMachine *)defaultViewStateMachineWithInitialView:(UIView *)view {
-    SBViewStateMachine* viewStateMachine = [[SBViewStateMachine alloc] initWithInitialView:view];
-    
-    
-    //configure defaults
-    NSBundle* thisBundle = [NSBundle bundleForClass:[SBViewStateMachine class]];
-    UIStoryboard* bundledStoryboard = [UIStoryboard storyboardWithName:@"SBViewState" bundle:thisBundle];
-    viewStateMachine.errorStateViewController = [bundledStoryboard instantiateViewControllerWithIdentifier:@"SBErrorViewController"];
-    [viewStateMachine setView:viewStateMachine.errorStateViewController.view
-                     forState:SBViewStateError];
-    
-    viewStateMachine.loadingStateViewController = [bundledStoryboard instantiateViewControllerWithIdentifier:@"SBLoadingViewController"];
-    [viewStateMachine setView:viewStateMachine.loadingStateViewController.view forState:SBViewStateLoading];
-    
-    return viewStateMachine;
-}
 
 - (void)moveToState:(NSString *)stateName{
     UIView* viewToMoveTo = [self.allStateViews valueForKey:stateName];

@@ -7,10 +7,10 @@
 //
 
 #import "ClientViewController.h"
-#import "SBViewStateMachine.h"
+#import "SBDefaultViewStateMachine.h"
 
 @interface ClientViewController ()
-@property (nonatomic, strong) SBViewStateMachine* viewStateMachine;
+@property (nonatomic, strong) SBDefaultViewStateMachine* viewStateMachine;
 @end
 
 @implementation ClientViewController
@@ -22,7 +22,7 @@
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     
-    self.viewStateMachine = [SBViewStateMachine defaultViewStateMachineWithInitialView:self.view];
+    self.viewStateMachine = [SBDefaultViewStateMachine defaultViewStateMachineWithInitialView:self.view];
     [self.viewStateMachine moveToState:SBViewStateLoading];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{

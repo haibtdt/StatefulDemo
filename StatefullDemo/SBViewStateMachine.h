@@ -23,10 +23,5 @@
 -(instancetype) initWithInitialView:(UIView*) initialView;
 
 
-#pragma mark - Defaults
-+ (SBViewStateMachine*) defaultViewStateMachineWithInitialView:(UIView*) view;
-@property (nonatomic, readonly) SBErrorViewController* errorStateViewController;
-@property (nonatomic, readonly) SBLoadingViewController* loadingStateViewController;
-
 
 @end
