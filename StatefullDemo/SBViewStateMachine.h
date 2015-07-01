@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "SBErrorViewController.h"
-#import "SBLoadingViewController.h"
 
 #define SBViewStateError @"errorView"
 #define SBViewStateLoading @"loadingView"

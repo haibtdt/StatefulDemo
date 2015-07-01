@@ -7,6 +7,8 @@
 //
 
 #import "SBViewStateMachine.h"
+#import "SBErrorViewController.h"
+#import "SBLoadingViewController.h"
 
 @interface SBDefaultViewStateMachine : SBViewStateMachine
 

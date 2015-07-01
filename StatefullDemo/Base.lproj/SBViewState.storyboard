@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -9,7 +10,7 @@
         <!--Loading-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="SBLoadingViewController" title="Loading" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="SBLoadingViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SBLoadingViewController" autoresizesArchivedViewToFullSize="NO" title="Loading" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="SBLoadingViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -18,25 +19,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCX-vd-80T">
-                                <rect key="frame" x="111" y="192" width="98" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCX-vd-80T">
+                                <rect key="frame" x="16" y="202" width="288" height="36"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="26"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Eua-ge-x3r">
-                                <rect key="frame" x="142" y="236" width="37" height="37"/>
+                                <rect key="frame" x="142" y="246" width="37" height="37"/>
                                 <color key="color" red="1" green="0.67423538859999999" blue="0.19884197640000001" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="oCX-vd-80T" secondAttribute="centerX" id="1tV-ev-9O2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oCX-vd-80T" secondAttribute="trailing" id="7PN-cl-Crk"/>
                             <constraint firstItem="oCX-vd-80T" firstAttribute="centerX" secondItem="Eua-ge-x3r" secondAttribute="centerX" id="FXO-vL-sgn"/>
                             <constraint firstItem="Eua-ge-x3r" firstAttribute="top" secondItem="oCX-vd-80T" secondAttribute="bottom" constant="8" id="kXx-PC-ri2"/>
-                            <constraint firstAttribute="centerY" secondItem="oCX-vd-80T" secondAttribute="centerY" constant="30" id="siv-vX-dJ2"/>
+                            <constraint firstAttribute="centerY" secondItem="oCX-vd-80T" secondAttribute="centerY" constant="20" id="siv-vX-dJ2"/>
+                            <constraint firstItem="oCX-vd-80T" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="tEw-Uk-bZa"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="loadingLabel" destination="oCX-vd-80T" id="MxE-Ya-avU"/>
@@ -49,7 +53,7 @@
         <!--Error-->
         <scene sceneID="Rki-SJ-BAP">
             <objects>
-                <viewController storyboardIdentifier="SBErrorViewController" title="Error" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IH1-TD-Hig" customClass="SBErrorViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SBErrorViewController" autoresizesArchivedViewToFullSize="NO" title="Error" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IH1-TD-Hig" customClass="SBErrorViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lbG-JF-lY3"/>
                         <viewControllerLayoutGuide type="bottom" id="wk6-j8-ido"/>
@@ -64,10 +68,10 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CzM-4h-hEA">
-                                <rect key="frame" x="97" y="46" width="150" height="150"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.39999999999999963" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="error" translatesAutoresizingMaskIntoConstraints="NO" id="CzM-4h-hEA">
+                                <rect key="frame" x="110" y="89" width="100" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="8hY-Y4-7cZ"/>
+                                    <constraint firstAttribute="width" constant="100" id="8hY-Y4-7cZ"/>
                                     <constraint firstAttribute="width" secondItem="CzM-4h-hEA" secondAttribute="height" multiplier="1:1" id="s4p-GZ-Nv1"/>
                                 </constraints>
                             </imageView>
@@ -81,8 +85,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="BuP-Yn-NWk" firstAttribute="centerX" secondItem="CzM-4h-hEA" secondAttribute="centerX" constant="-12" id="2XA-Hl-Viy"/>
-                            <constraint firstItem="BuP-Yn-NWk" firstAttribute="top" secondItem="CzM-4h-hEA" secondAttribute="bottom" constant="1" id="77h-kt-orM"/>
+                            <constraint firstItem="BuP-Yn-NWk" firstAttribute="centerX" secondItem="CzM-4h-hEA" secondAttribute="centerX" id="2XA-Hl-Viy"/>
+                            <constraint firstItem="BuP-Yn-NWk" firstAttribute="top" secondItem="CzM-4h-hEA" secondAttribute="bottom" constant="8" symbolic="YES" id="77h-kt-orM"/>
                             <constraint firstItem="NK1-bV-cf0" firstAttribute="top" secondItem="BuP-Yn-NWk" secondAttribute="bottom" constant="8" id="Bbi-Il-Vic"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BuP-Yn-NWk" secondAttribute="trailing" id="FDD-HU-HdQ"/>
                             <constraint firstAttribute="centerX" secondItem="BuP-Yn-NWk" secondAttribute="centerX" id="M4X-t8-nK8"/>
@@ -91,6 +95,7 @@
                             <constraint firstItem="NK1-bV-cf0" firstAttribute="centerX" secondItem="BuP-Yn-NWk" secondAttribute="centerX" id="saQ-1d-6ie"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="errorImage" destination="CzM-4h-hEA" id="sEI-9d-A7F"/>
@@ -103,4 +108,7 @@
             <point key="canvasLocation" x="692" y="188"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="error" width="28" height="27"/>
+    </resources>
 </document>

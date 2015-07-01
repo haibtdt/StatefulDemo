@@ -52,14 +52,8 @@
 
     if (viewToMoveTo != initialView) {
         
-        //configure the current state view and its layout constraints
+        viewToMoveTo.frame = initialView.frame;
         [initialView addSubview:viewToMoveTo];
-        NSArray* constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[viewToMoveTo]-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(viewToMoveTo)];
-        [initialView addConstraints:constraints];
-        constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[viewToMoveTo]-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(viewToMoveTo)];
-        [initialView addConstraints:constraints];
-        
-        NSLog(@"Moved to state: %@", stateName);
         
     }
 }
